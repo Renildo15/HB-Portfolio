@@ -1,0 +1,28 @@
+.social_links {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    /* margin-top: 74px; */
+}
+
+.social_links a {
+    border: 2px solid var(--primary-color);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.social_links a:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.social_links a:hover svg{
+    filter: invert(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.social_links a svg {
+    width: 20px;
+    height: 20px;
+}

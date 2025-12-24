@@ -1,0 +1,43 @@
+.hero_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 60px 80px;
+}
+
+.hero_introduction {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 74px;
+}
+
+.hero_content {
+    display: flex;
+    width: 100%;
+    padding: 0 32px;
+}
+
+.hero_texts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+
+.hero_introduction h1 {
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.hero_description_text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+    text-align: left;
+}
