@@ -19,7 +19,7 @@ export default function LoginCard() {
 
         // On successful login, redirect to admin dashboard
 
-        redirect('/dashboard');
+        redirect('/admin');
 
     }
 
