@@ -1,11 +1,27 @@
+'use client';
+
+import { useRouter } from "next/navigation";
+
 export default function Admin() {
+    const router = useRouter();
+    const handleLogout = async () => {
+        const res = await fetch('/api/auth/logout', {
+            method: 'POST',
+        });
+        
+        if (res.ok) {
+           router.push("/admin")
+        } else {
+            alert("Erro ao fazer logout");
+        }
+    }
     return (
         <main>
            <header>
             <div>Logo</div>
             <div>
                 <span>Admin</span>
-                <button>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
             </div>
            </header>
            <div>
