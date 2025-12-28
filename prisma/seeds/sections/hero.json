@@ -1,0 +1,66 @@
+{
+    "title": "Hero",
+    "fields": [
+        {
+            "type": "checkbox",
+            "name": "show",
+            "label": "Exibir seção?"
+        },
+        {
+          "type": "title",
+          "label": "Imagem"
+        },
+        {
+            "type": "image",
+            "name": "image",
+            "label": "Imagem"
+        },
+        {
+          "type": "title",
+          "label": "Título"
+        },
+
+        {
+            "type": "text",
+            "name": "text",
+            "label": "Título do hero"
+        },
+
+        {
+          "type": "title",
+          "label": "Descrição"
+        },
+
+        {
+            "type": "text",
+            "name": "description",
+            "label": "Descrição do hero"
+        },
+        
+        {
+            "type": "array",
+            "name": "items",
+            "label": "Redes Sociais",
+            "fields": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "text",
+                    "name": "link",
+                    "label": "Link"
+                },
+                {
+                    "type": "icon",
+                    "name": "icon",
+                    "label": "Icone"
+                }
+
+            ]
+        }
+    ]
+
+    
+}

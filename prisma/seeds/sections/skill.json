@@ -1,0 +1,45 @@
+{
+    "title": "Skill",
+    "fields": [
+        {
+            "type": "checkbox",
+            "name": "show",
+            "label": "Exibir seção?"
+        },
+        {
+          "type": "title",
+          "label": "Título da seção"
+        },
+        {
+            "type": "text",
+            "name": "title",
+            "label": "Título"
+        },
+        
+        {
+            "type": "array",
+            "name": "items",
+            "label": "Habilidades",
+            "fields": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "text",
+                    "name": "link",
+                    "label": "Link"
+                },
+                {
+                    "type": "icon",
+                    "name": "icon",
+                    "label": "Icone"
+                }
+
+            ]
+        }
+    ]
+
+    
+}

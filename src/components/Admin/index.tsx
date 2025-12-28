@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
+import styles from './admin.module.css';
 
 export default function Admin() {
     const router = useRouter();
@@ -16,54 +17,54 @@ export default function Admin() {
         }
     }
     return (
-        <main>
-           <header>
-            <div>Logo</div>
-            <div>
+        <main className={styles.container}>
+           <header className={styles.header}>
+            <div className={styles.logo}>Logo</div>
+            <div className={styles.userActions}>
                 <span>Admin</span>
                 <button onClick={handleLogout}>Logout</button>
             </div>
            </header>
-           <div>
-            <div>
-                <div>
+           <div className={styles.content}>
+            <div className={styles.stats}>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Visitas</span>
                 </div>
 
-                <div>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Curriculos baixados</span>
                 </div>
 
-                <div>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Seções</span>
                 </div>
 
-                <div>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Projetos</span>
                 </div>
 
-                <div>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Habilidades</span>
                 </div>
 
-                <div>
+                <div className={styles.stat}>
                     <span>0</span>
                     <span>Contatos</span>
                 </div>
 
             </div>
-            <div>
-                <div>
+            <div className={styles.sections}>
+                <div className={styles.sectionsHeader}>
                     <h2>Seções</h2>
-                    <button>Adicionar seção</button>
+                    <button >Adicionar seção</button>
                 </div>
 
-                <table>
+                <table className={styles.table}>
                     <thead>
                         <tr>
                             <th>Nome</th>

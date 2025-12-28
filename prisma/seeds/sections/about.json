@@ -1,0 +1,40 @@
+{
+    "title": "About",
+    "fields": [
+        {
+            "type": "checkbox",
+            "name": "show",
+            "label": "Exibir seção?"
+        },
+        {
+          "type": "title",
+          "label": "Título da seção"
+        },
+        {
+            "type": "text",
+            "name": "title",
+            "label": "Título"
+        },
+        {
+            "type": "title",
+            "label": "Imagem"
+        },
+        {
+            "type": "image",
+            "name": "image",
+            "label": "Imagem"
+        },
+        {
+          "type": "title",
+          "label": "Descrição"
+        },
+
+        {
+            "type": "text",
+            "name": "description",
+            "label": "Descrição do hero"
+        }
+    ]
+
+    
+}

@@ -1,0 +1,50 @@
+{
+    "title": "Project",
+    "fields": [
+        {
+            "type": "checkbox",
+            "name": "show",
+            "label": "Exibir seção?"
+        },
+        {
+          "type": "title",
+          "label": "Título da seção"
+        },
+        {
+            "type": "text",
+            "name": "title",
+            "label": "Título"
+        },
+        
+        {
+            "type": "array",
+            "name": "items",
+            "label": "Projetos",
+            "fields": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "number",
+                    "name": "order",
+                    "label": "Ordem"
+                },
+                {
+                    "type": "text",
+                    "name": "description",
+                    "label": "Descrição"
+                },
+                {
+                    "type": "image",
+                    "name": "image",
+                    "label": "Imagem do projeto"
+                }
+
+            ]
+        }
+    ]
+
+    
+}

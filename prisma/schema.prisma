@@ -15,12 +15,22 @@ model User {
   password String
 }
 
+model SectionType {
+  id                  Int     @id @default(autoincrement())
+  name                String
+  type                String 
+  configs_json        Json
+  sections            Section[]
+  created_at          DateTime @default(now())
+  updated_at          DateTime @updatedAt
+}
 model Section {
   id                  Int     @id @default(autoincrement())
   name                String
-  type                String
-  section_json        Json
-  section_json_values Json
+  typeId              Int
+  type                SectionType @relation(fields: [typeId], references: [id])
+ 
+  values_json         Json
   order               Int
   created_at          DateTime @default(now())
   updated_at          DateTime @updatedAt

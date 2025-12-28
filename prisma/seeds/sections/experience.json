@@ -1,0 +1,60 @@
+{
+    "title": "Experience",
+    "fields": [
+        {
+            "type": "checkbox",
+            "name": "show",
+            "label": "Exibir seção?"
+        },
+        {
+          "type": "title",
+          "label": "Título da seção"
+        },
+        {
+            "type": "text",
+            "name": "title",
+            "label": "Título"
+        },
+        
+        {
+            "type": "array",
+            "name": "items",
+            "label": "Experiencias",
+            "fields": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "date",
+                    "name": "date",
+                    "label": "Data de inicio"
+                },
+                {
+                    "type": "date",
+                    "name": "date",
+                    "label": "Data do fim"
+                },
+                {
+                    "type": "checkbox",
+                    "name": "current",
+                    "label": "Trabalhando atualmente"
+                },
+                {
+                    "type": "text",
+                    "name": "description",
+                    "label": "Descrição"
+                },
+                {
+                    "type": "icon",
+                    "name": "icon",
+                    "label": "Icone"
+                }
+
+            ]
+        }
+    ]
+
+    
+}

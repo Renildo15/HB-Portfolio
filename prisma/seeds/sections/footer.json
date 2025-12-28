@@ -1,0 +1,28 @@
+{
+    "title": "Footer",
+    "fields": [
+        {
+          "type": "title",
+          "label": "Informações"
+        },
+        {
+            "type": "image",
+            "name": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "text",
+            "name": "text_1",
+            "label": "Data"
+        },
+         {
+            "type": "text",
+            "name": "text_2",
+            "label": "Autor"
+        }
+
+        
+    ]
+
+    
+}

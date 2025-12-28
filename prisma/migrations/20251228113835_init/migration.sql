@@ -6,15 +6,25 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Section" (
+CREATE TABLE "SectionType" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
     "type" TEXT NOT NULL,
-    "section_json" JSONB NOT NULL,
-    "section_json_values" JSONB NOT NULL,
-    "order" INTEGER NOT NULL,
+    "configs_json" JSONB NOT NULL,
     "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" DATETIME NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "Section" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "typeId" INTEGER NOT NULL,
+    "values_json" JSONB NOT NULL,
+    "order" INTEGER NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" DATETIME NOT NULL,
+    CONSTRAINT "Section_typeId_fkey" FOREIGN KEY ("typeId") REFERENCES "SectionType" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable

@@ -1,0 +1,61 @@
+{
+    "title": "Header",
+    "fields": [
+        {
+          "type": "title",
+          "label": "Logo"
+        },
+        {
+            "type": "image",
+            "name": "logo",
+            "label": "Logo"
+        },
+
+        {
+          "type": "title",
+          "label": "Botão do Curriculo"
+        },
+        {
+            "type": "text",
+            "name": "btn_text",
+            "label": "Texto do botão"
+        },
+
+        {
+            "type": "text",
+            "name": "btn_link",
+            "label": "Texto do botão"
+        },
+
+        {
+            "type": "icon",
+            "name": "btn_icon",
+            "label": "Icone"
+        },
+        {
+            "type": "array",
+            "name": "items",
+            "label": "Links",
+            "fields": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "text",
+                    "name": "link",
+                    "label": "Link"
+                },
+                {
+                    "type": "icon",
+                    "name": "icon",
+                    "label": "Icone"
+                }
+
+            ]
+        }
+    ]
+
+    
+}
