@@ -2,8 +2,11 @@
 
 import { useRouter } from "next/navigation";
 import styles from './admin.module.css';
+import Modal from "../Modal";
+import { useState } from "react";
 
 export default function Admin() {
+    const [showModal, setShowModal] = useState(false);
     const router = useRouter();
     const handleLogout = async () => {
         const res = await fetch('/api/auth/logout', {
@@ -25,6 +28,8 @@ export default function Admin() {
                 <button onClick={handleLogout}>Logout</button>
             </div>
            </header>
+           {showModal && <Modal setShowModal={setShowModal}/>}
+           
            <div className={styles.content}>
             <div className={styles.stats}>
                 <div className={styles.stat}>
@@ -61,7 +66,7 @@ export default function Admin() {
             <div className={styles.sections}>
                 <div className={styles.sectionsHeader}>
                     <h2>Seções</h2>
-                    <button >Adicionar seção</button>
+                    <button onClick={() => setShowModal(true)} >Adicionar seção</button>
                 </div>
 
                 <table className={styles.table}>

@@ -5,10 +5,10 @@ export async function GET(req: NextRequest) {
     const auth = req.cookies.get("auth");
 
     if (!auth) {
-        return NextResponse.json(
-            { error: "Não autorizado" },
-            { status: 401 }
-        );
+      return NextResponse.json(
+          { error: "Não autorizado" },
+          { status: 401 }
+      );
     }
   try {
     const sectionsTypes = await prisma.sectionType.findMany();
