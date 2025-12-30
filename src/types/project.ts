@@ -1,14 +1,11 @@
-export type ProjectItem = {
-    title: string;
-    description: string;
-    imageSrc: string;
-    projectUrl: string;
-    order?: number;
-}
+import { ArrayField, CheckboxField, TextField, TitleField } from "./section"
 
-export type ProjectProps = {
-    projects: ProjectItem[];
-    backgroundColor?: string;
-    titleColor?: string;
-    descriptionColor?: string;
+export type ProjectConfig = {
+  title: "Project"
+  fields: (
+    | CheckboxField
+    | TitleField
+    | TextField
+    | ArrayField
+  )[]
 }

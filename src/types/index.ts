@@ -1,17 +1,20 @@
-import { HeaderProps } from "./header";
-import { HeroProps } from "./hero";
-import { SkillsProps } from "./skills";
-import { ExperienceProps } from "./experience";
-import { AboutProps } from "./about";
-import { ProjectProps } from "./project";
-import { ContactMeProps } from "./contactme";
-
+import { HeaderConfig } from "./header";
+import { HeroConfig } from "./hero";
+import { SkillConfig } from "./skills";
+import { ExperienceConfig } from "./experience";
+import { AboutConfig } from "./about";
+import { ProjectConfig } from "./project";
+import { ContactConfig } from "./contactme";
+import { FooterConfig } from "./footer";
+import { SectionType } from "./section";
 export type { 
-    HeaderProps, 
-    HeroProps, 
-    SkillsProps, 
-    ExperienceProps,
-    AboutProps,
-    ProjectProps,
-    ContactMeProps
+    HeaderConfig, 
+    HeroConfig, 
+    SkillConfig, 
+    ExperienceConfig,
+    AboutConfig,
+    ProjectConfig,
+    ContactConfig,
+    FooterConfig,
+    SectionType
 };

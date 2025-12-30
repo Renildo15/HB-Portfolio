@@ -1,17 +1,12 @@
-export type HeroSocialLink = {
-    platform: string;
-    url: string;
-    iconSrc?: string;
-    brandColor?: string;
-    bgColor?: string;
-}
+import { ArrayField, CheckboxField, TextField, TitleField, ImageField } from "./section"
 
-export type HeroProps = {
-    title: string;
-    description?: string;
-    backgroundImageSrc?: string;
-    backgroundImageSrcMobile?: string;
-    socialLinks?: HeroSocialLink[];
-    titleColor?: string;
-    descriptionColor?: string;
+export type HeroConfig = {
+  title: "Hero"
+  fields: (
+    | CheckboxField
+    | TitleField
+    | TextField
+    | ImageField
+    | ArrayField
+  )[]
 }

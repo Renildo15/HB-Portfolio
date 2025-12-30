@@ -1,10 +1,11 @@
-export type SkillItem = {
-    iconSrc: string;
-    name: string;
-    color?: string;
-    backgroundColor?: string;
-}
+import { ArrayField, CheckboxField, TextField, TitleField } from "./section"
 
-export type SkillsProps = {
-    skills: SkillItem[];
+export type SkillConfig = {
+  title: "Skill"
+  fields: (
+    | CheckboxField
+    | TitleField
+    | TextField
+    | ArrayField
+  )[]
 }

@@ -1,20 +1,12 @@
-export type HeaderMenuItem = {
-    label: string;
-    href: string;
-    textColor?: string;
-    order?: number;
-}
+import { ArrayField, IconField, ImageField, TextField, TitleField } from "./section"
 
-export type HeaderButton = {
-    label: string;
-    href: string;
-    icon?: string;
-    bgColor?: string;
-    textColor?: string;
-}
-
-export type HeaderProps = {
-    logoSrc: string;
-    menuItems: HeaderMenuItem[];
-    button: HeaderButton;
+export type HeaderConfig = {
+  title: "Header"
+  fields: (
+    | TitleField
+    | ImageField
+    | TextField
+    | IconField
+    | ArrayField
+  )[]
 }

@@ -1,16 +1,11 @@
-export type ExperienceItem = {
-    company: string;
-    companyLogoSrc?: string;
-    role: string;
-    startDate: string;
-    endDate?: string;
-    description?: string;
-}
+import { ArrayField, CheckboxField, TextField, TitleField } from "./section"
 
-export type ExperienceProps = {
-    experiences: ExperienceItem[];
-    backgroundColor?: string;
-    titleColor?: string;
-    borderColor?: string;
-    descriptionColor?: string;
+export type ExperienceConfig = {
+  title: "Experience"
+  fields: (
+    | CheckboxField
+    | TitleField
+    | TextField
+    | ArrayField
+  )[]
 }
