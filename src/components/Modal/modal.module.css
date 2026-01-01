@@ -12,11 +12,13 @@
     background: #0a0a0a; /* cinza escuro admin */
     color: #f9fafb;
     width: 100%;
-    max-width: 420px;
+    max-width: 820px;
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     animation: fadeIn 0.2s ease-in-out;
+    overflow-y: auto;
+    max-height: 500px;
 }
 
 .title {

@@ -1,0 +1,99 @@
+.header_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== LOGO ===== */
+.header_form_logo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header_form_logo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.header_form_logo input[type="file"] {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* ===== LINKS ===== */
+.header_form_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header_form_header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header_form_header > span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.header_form_header > button {
+  align-self: flex-start;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header_form_links > button:hover {
+  background: #222;
+}
+
+/* cada linha de link */
+.header_form_link {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.header_form_link input {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.header_form_link input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* ===== BOTÃO ===== */
+.header_form_button {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header_form_button input {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.header_form_button input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.header_form_button label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
