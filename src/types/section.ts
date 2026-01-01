@@ -89,7 +89,7 @@ export type SectionConfigBase = {
 }
 
 
-type SectionConfig =
+export type SectionConfig =
   | HeaderConfig
   | ExperienceConfig
   | AboutConfig

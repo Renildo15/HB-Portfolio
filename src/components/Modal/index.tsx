@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react"
+import { JSX, useEffect, useState } from "react"
 import styles from "./modal.module.css"
+import HeaderForm from "../Forms/HeaderForm";
 
 type SectionType = {
     id: number;
@@ -14,6 +15,18 @@ export default function Modal(props: IModalProps) {
     const [name, setName] = useState("");
     const [sectionTypes, setSectionTypes] = useState<SectionType[]>([]);
     const [selectedType, setSelectedType] = useState("");
+    const [defaultForm, setDefaultForm] = useState<JSX.Element | undefined>(undefined);
+
+    useEffect(() => {
+        switch (selectedType) {
+            case "1":
+                setDefaultForm(<HeaderForm/>);
+                break;
+            default:
+                setDefaultForm(undefined);
+                break;
+        }
+    }, [selectedType]);
 
     useEffect(() => {
         const getSectionTypes = async () => {
@@ -38,7 +51,7 @@ export default function Modal(props: IModalProps) {
             <div className={styles.modal}>
                 <h3 className={styles.title}>Nova seção</h3>
 
-                <div className={styles.form}>
+                <form className={styles.form}>
                     <input
                         className={styles.input}
                         type="text"
@@ -60,7 +73,8 @@ export default function Modal(props: IModalProps) {
                             </option>
                         ))}
                     </select>
-                </div>
+                   {defaultForm}
+                </form>
 
                 <div className={styles.actions}>
                     <button className={styles.save}>Salvar</button>
