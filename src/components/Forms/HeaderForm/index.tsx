@@ -1,12 +1,6 @@
 import { useState } from "react";
 import styles from "./header.module.css"
-
-type InputType = {
-    id: string;
-    type: "text";
-    label: string;
-    name: string;
-}
+import { InputType } from "@/src/types/input";
 
 export default function HeaderForm() {
     const [inputs, setInputs] = useState<InputType[]>([]);

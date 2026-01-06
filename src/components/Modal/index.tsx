@@ -1,6 +1,7 @@
 import { JSX, useEffect, useState } from "react"
 import styles from "./modal.module.css"
 import HeaderForm from "../Forms/HeaderForm";
+import HeroForm from "../Forms/HeroForm";
 
 type SectionType = {
     id: number;
@@ -21,6 +22,9 @@ export default function Modal(props: IModalProps) {
         switch (selectedType) {
             case "1":
                 setDefaultForm(<HeaderForm/>);
+                break;
+            case "2":
+                setDefaultForm(<HeroForm/>);
                 break;
             default:
                 setDefaultForm(undefined);
