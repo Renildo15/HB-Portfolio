@@ -2,6 +2,7 @@ import { JSX, useEffect, useState } from "react"
 import styles from "./modal.module.css"
 import HeaderForm from "../Forms/HeaderForm";
 import HeroForm from "../Forms/HeroForm";
+import SkillsForm from "../Forms/SkillsForm";
 
 type SectionType = {
     id: number;
@@ -25,6 +26,9 @@ export default function Modal(props: IModalProps) {
                 break;
             case "2":
                 setDefaultForm(<HeroForm/>);
+                break;
+            case "3":
+                setDefaultForm(<SkillsForm/>);
                 break;
             default:
                 setDefaultForm(undefined);

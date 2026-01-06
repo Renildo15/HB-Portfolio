@@ -1,0 +1,47 @@
+.skill_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill_form_texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.skill_form_texts input,
+.skill_form_skills input {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.skill_form_skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill_form_skills_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill_form_skills_btn{
+  align-self: flex-start;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.skill_form_skills_btn:hover {
+  background: #222;
+}
