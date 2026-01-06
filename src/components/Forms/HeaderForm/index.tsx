@@ -1,38 +1,8 @@
-import { useState } from "react";
 import styles from "./header.module.css"
-import { InputType } from "@/src/types/input";
+import { useDynamicInputs } from "@/src/hooks/useDynamicInputs";
 
 export default function HeaderForm() {
-    const [inputs, setInputs] = useState<InputType[]>([]);
-
-    const handleAddLinkInput = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        
-        const newId = Date.now();
-        
-        const newLabelInput: InputType = {
-            id: newId + "-label",
-            label: "Nome",
-            name: `label-link-${inputs.length}`,
-            type: "text"
-        }
-
-        const newLinkInput: InputType = {
-            id: newId + "-link",
-            label: "Link",
-            name: `link-${inputs.length}`,
-            type: "text"
-        }
-
-        const newIconInput: InputType = {
-            id: newId + "-icon",
-            label: "Icon",
-            name: `icon-link-${inputs.length}`,
-            type: "text"
-        }
-
-        setInputs(prev => [...prev, newLabelInput, newLinkInput, newIconInput]);
-    }
+    const { inputs, addTripleTextInput} = useDynamicInputs();  
     return (
         <div className={styles.header_form}>
             <div className={styles.header_form_logo}>
@@ -42,7 +12,7 @@ export default function HeaderForm() {
             <div className={styles.header_form_links}>
                 <div className={styles.header_form_header}>
                     <span>Links</span>
-                    <button onClick={(e: React.MouseEvent<HTMLButtonElement>)=>handleAddLinkInput(e)}>Adicionar +</button>
+                    <a href="#" onClick={addTripleTextInput} className={styles.header_form_btn_socials}>Adicionar +</a>
                 </div>
                 {inputs.map((i) => (
                     <div className={styles.header_form_link} key={i.name}>

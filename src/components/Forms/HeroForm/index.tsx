@@ -1,38 +1,8 @@
-import { useState } from "react";
 import styles from "./hero.module.css"
-import { InputType } from "@/src/types/input";
+import { useDynamicInputs } from "@/src/hooks/useDynamicInputs";
 
 export default function HeroForm() {
-    const [inputs, setInputs] = useState<InputType[]>([]);
-
-    const handleAddLinkInput = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        
-        const newId = Date.now();
-        
-        const newLabelInput: InputType = {
-            id: newId + "-label",
-            label: "Nome",
-            name: `label-link-${inputs.length}`,
-            type: "text"
-        }
-
-        const newLinkInput: InputType = {
-            id: newId + "-link",
-            label: "Link",
-            name: `link-${inputs.length}`,
-            type: "text"
-        }
-
-        const newIconInput: InputType = {
-            id: newId + "-icon",
-            label: "Icon",
-            name: `icon-link-${inputs.length}`,
-            type: "text"
-        }
-
-        setInputs(prev => [...prev, newLabelInput, newLinkInput, newIconInput]);
-    }
+    const { inputs, addTripleTextInput} = useDynamicInputs();    
     return (
         <div className={styles.hero_form}>
             <div className={styles.hero_form_texts}>
@@ -47,7 +17,7 @@ export default function HeroForm() {
             <div className={styles.hero_form_socials}>
                 <div className={styles.hero_form_socials_header}>
                     <label htmlFor="">Redes sociais</label>
-                    <button onClick={(e) => handleAddLinkInput(e)} className={styles.hero_form_btn_socials}>Adicionar +</button>
+                    <a href="#" onClick={addTripleTextInput} className={styles.hero_form_btn_socials}>Adicionar +</a>
                 </div>
                 {inputs.map((i) => (
                     <input key={i.id} type={i.type} name={i.name} id={i.name} placeholder={i.label}/>

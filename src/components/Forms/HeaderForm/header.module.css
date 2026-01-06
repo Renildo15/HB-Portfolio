@@ -39,7 +39,7 @@
   font-weight: 600;
 }
 
-.header_form_header > button {
+.header_form_header > .header_form_btn_socials {
   align-self: flex-start;
   background: #000;
   color: #fff;
@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 
-.header_form_links > button:hover {
+.header_form_links > .header_form_btn_socials:hover {
   background: #222;
 }
 
